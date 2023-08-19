@@ -37,11 +37,11 @@
 					</select>
 				</div>
 				<div class="mb-3 col-6">
-					<label for="jenis_kelamin" class="form-label">Program Studi</label>
+					<label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
 					<select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
 						<option value="">-- Pilih Jenis Kelamin --</option>
-						<option value=" Laki Laki"> Laki Laki</option>
-						<option value=" Perempuan"> Perempuan</option>
+						<option value="Laki Laki"> Laki Laki</option>
+						<option value="Perempuan"> Perempuan</option>
 					</select>
 				</div>
 			</div>
