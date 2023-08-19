@@ -1,4 +1,11 @@
 <?php
+	// membatasi halaman sebelum login
+	if (!isset($_SESSION["login"])){
+		echo "<script>
+		document.location.href = 'login.php';
+		</script>";
+		exit;
+	}
 $title = 'Daftar Barang';
 include './layout/header.php';
 $data_barang = select("SELECT * from barang ORDER BY id_barang ASC");

@@ -1,4 +1,11 @@
 <?php
+	// membatasi halaman sebelum login
+	if (!isset($_SESSION["login"])){
+		echo "<script>
+		document.location.href = 'login.php';
+		</script>";
+		exit;
+	}
 	$title = 'Daftar Mahasiswa';
 	include './layout/header.php';
 	// menampilkan data mahasiswa
