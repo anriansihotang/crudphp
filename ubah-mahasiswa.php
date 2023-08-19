@@ -61,16 +61,26 @@
 			</div>
 			<div class="mb-3">
 				<label for="foto" class="form-label">Foto</label>
-				<input type="file" class="form-control" id="foto" name="foto" placeholder="Foto...">
-				<p>
-					<small>Gambar Sebelumnya</small>
-					
-				</p>
-				<img src="assets/img/<?=$mahasiswa['foto'];?>" alt="" width="150">
+				<input type="file" class="form-control" id="foto" name="foto" placeholder="Foto..." onchange="previewImg()">
+				<img src="assets/img/<?= $mahasiswa['foto'];?>" alt="" class="img-thumbnail img-preview mt-2" width="120px">
 			</div>
 			<button type="submit" name="ubah" class="btn btn-primary" style="float: right;">Ubah</button>
 		</form>
 	</main>
+	<!-- preview image -->
+	<script>
+		function previewImg() {
+			const foto = document.querySelector('#foto');
+			const imgPreview = document.querySelector('.img-preview');
+
+			const fileFoto = new FileReader();
+			fileFoto.readAsDataURL(foto.files[0]);
+
+			fileFoto.onload = function(e){
+				imgPreview.src = e.target.result;
+			}
+		}
+	</script>
 <?php 
 	include './layout/footer.php';
 ?>
