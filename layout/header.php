@@ -30,7 +30,7 @@
           <a class="nav-link" href="mahasiswa.php">mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">modal</a>
+          <a class="nav-link" href="crud-modal.php">modal</a>
         </li>
       </ul>
     </div>
