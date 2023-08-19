@@ -120,4 +120,15 @@
 		move_uploaded_file($tmpName, 'assets/img/'. $namaFileBaru);
 		return $namaFileBaru;
 	}
+	// fungsi menghapus data mahasiswa
+	function delete_mahasiswa($id_mahasiswa){
+		global $db;
+
+		// query hapus data mahasiswa
+		$query = "DELETE FROM mahasiswa WHERE id_mahasiswa = $id_mahasiswa";
+		
+		mysqli_query($db, $query);
+
+		return mysqli_affected_rows($db);
+	}
 ?>

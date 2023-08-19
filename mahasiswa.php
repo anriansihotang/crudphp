@@ -31,7 +31,7 @@
 				<td class="text-center" width="19%">
 				<a href="detail-mahasiswa.php?id_mahasiswa=<?= $mahasiswa['id_mahasiswa'];?>" class="btn btn-secondary">Detail</a>
 				<a href="" class="btn btn-success">Ubah</a>
-				<a href="" class="btn btn-danger" onclick="return confirm('Yakin Data Barang Akan Dihapus ? ');">Hapus</a>
+				<a href="hapus-mahasiswa.php?id_mahasiswa=<?= $mahasiswa['id_mahasiswa'];?>" class="btn btn-danger" onclick="return confirm('Yakin Data Barang Akan Dihapus ? ');">Hapus</a>
 				</td>
 			</tr>
 			<?php endforeach; ?>
