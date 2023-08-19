@@ -18,9 +18,9 @@
 	function create_barang($post){
 		global $db;
 
-		$nama = $post['nama'];
-		$jumlah = $post['jumlah']; 
-		$harga = $post['harga']; 
+		$nama = strip_tags($post['nama']);
+		$jumlah = strip_tags($post['jumlah']); 
+		$harga = strip_tags($post['harga']); 
 
 		// query tambah data
 		$query = "INSERT INTO barang VALUES(null,'$nama','$jumlah','$harga', CURRENT_TIMESTAMP())";
@@ -35,9 +35,9 @@
 		global $db;
 
 		$id_barang = $post['id_barang'];
-		$nama = $post['nama'];
-		$jumlah = $post['jumlah']; 
-		$harga = $post['harga']; 
+		$nama = strip_tags($post['nama']);
+		$jumlah = strip_tags($post['jumlah']); 
+		$harga = strip_tags($post['harga']); 
 
 		// query ubah data
 		$query = "UPDATE barang SET nama = '$nama', jumlah = '$jumlah',harga = '$harga' WHERE id_barang = $id_barang";
@@ -63,11 +63,11 @@
 	function create_mahasiswa($post){
 		global $db;
 
-		$nama = $post['nama'];
-		$prodi = $post['prodi']; 
-		$jenis_kelamin = $post['jenis_kelamin'];
-		$telepon = $post['telepon'];  
-		$email = $post['email']; 
+		$nama = strip_tags($post['nama']);
+		$prodi = strip_tags($post['prodi']); 
+		$jenis_kelamin = strip_tags($post['jenis_kelamin']);
+		$telepon = strip_tags($post['telepon']);  
+		$email = strip_tags($post['email']); 
 		$foto = upload_file(); 
 		// check upload file
 		if (!$foto){
