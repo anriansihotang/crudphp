@@ -32,8 +32,8 @@
 		</tr>
 		<tr>
 			<td width="50%	">Foto</td>
-			<td><a href="assets/img/foto.png">
-			<img src="./assets/img/foto.png" alt="" width="50%">
+			<td><a href="assets/img/<?= $mahasiswa['foto'];?>">
+			<img src="./assets/img/<?= $mahasiswa['foto'];?>" alt="" width="50%">
 			</a></td>
 		</tr>
 	</table>

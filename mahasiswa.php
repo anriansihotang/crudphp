@@ -7,7 +7,7 @@
 	<main class="container mt-5">
 	<h1>Data Mahasiswa</h1>
 	<hr>
-	<a href="tambah-barang.php" class="btn btn-primary mb-1">Tambah</a>
+	<a href="tambah-mahasiswa.php" class="btn btn-primary mb-1">Tambah</a>
 	<table class="table table-bordered table-striped mt-3" id="table">
 		<thead>
 			<tr>

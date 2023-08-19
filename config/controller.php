@@ -58,4 +58,23 @@
 
 		return mysqli_affected_rows($db);
 	}
+
+	// fungsi menambahkan data Mahasiswa
+	function create_mahasiswa($post){
+		global $db;
+
+		$nama = $post['nama'];
+		$prodi = $post['prodi']; 
+		$jenis_kelamin = $post['jenis_kelamin'];
+		$telepon = $post['telepon'];  
+		$email = $post['email']; 
+		$foto = $post['foto']; 
+
+		// query tambah data
+		$query = "INSERT INTO mahasiswa VALUES(null,'$nama','$prodi','$jenis_kelamin', '$telepon','$email','$foto')";
+
+		mysqli_query($db, $query);
+
+		return mysqli_affected_rows($db);
+	}
 ?>
