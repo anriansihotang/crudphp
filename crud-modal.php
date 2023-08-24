@@ -1,4 +1,5 @@
 <?php
+session_start();
 	// membatasi halaman sebelum login
 	if (!isset($_SESSION["login"])){
 		echo "<script>
@@ -7,7 +8,7 @@
 		exit;
 	}
 $title = 'Daftar Akun';
-include './layout/header.php';
+include 'layout/header.php';
 $data_akun = select("SELECT * from akun");
 // jika tombol tambah ditekan
 if (isset($_POST['tambah'])) {
@@ -184,5 +185,5 @@ if (isset($_POST['ubah'])) {
 	</div>
 	<?php endforeach ?>
 <?php 
-include './layout/footer.php'
+include 'layout/footer.php'
 ?>

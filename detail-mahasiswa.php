@@ -1,4 +1,5 @@
 <?php
+session_start();
 	// membatasi halaman sebelum login
 	if (!isset($_SESSION["login"])){
 		echo "<script>
@@ -7,7 +8,7 @@
 		exit;
 	}
 	$title = 'Detail Mahasiswa';
-	include './layout/header.php';
+	include 'layout/header.php';
 	// mengambil id mahasiswa
 	$id_mahasiswa = (int)$_GET['id_mahasiswa'];
 	// menampilkan data mahasiswa
@@ -50,5 +51,5 @@
 	</main>
 
 <?php
-	include './layout/footer.php';
+	include 'layout/footer.php';
 ?>

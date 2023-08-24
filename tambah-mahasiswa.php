@@ -1,4 +1,5 @@
 <?php
+session_start();
 	// membatasi halaman sebelum login
 	if (!isset($_SESSION["login"])){
 		echo "<script>
@@ -7,7 +8,7 @@
 		exit;
 	}
 	$title = 'Tambah Mahasiswa';
-	include './layout/header.php';
+	include 'layout/header.php';
 
 	// check apakah tombol tambah ditekan
 	if(isset($_POST['tambah'])){
@@ -83,5 +84,5 @@
 		}
 	</script>
 <?php 
-	include './layout/footer.php';
+	include 'layout/footer.php';
 ?>

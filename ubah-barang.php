@@ -1,4 +1,5 @@
 <?php
+session_start();
 	// membatasi halaman sebelum login
 	if (!isset($_SESSION["login"])){
 		echo "<script>
@@ -7,7 +8,7 @@
 		exit;
 	}
 	$title = 'Ubah Barang';
-	include './layout/header.php';
+	include 'layout/header.php';
 
 	// mengambil id_barang dari url
 	$id_barang = (int)$_GET['id_barang'];
@@ -51,5 +52,5 @@
 		</form>
 	</main>
 <?php 
-	include './layout/footer.php';
+	include 'layout/footer.php';
 ?>

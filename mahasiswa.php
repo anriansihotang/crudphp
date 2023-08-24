@@ -1,4 +1,5 @@
 <?php
+session_start();
 	// membatasi halaman sebelum login
 	if (!isset($_SESSION["login"])){
 		echo "<script>
@@ -7,7 +8,7 @@
 		exit;
 	}
 	$title = 'Daftar Mahasiswa';
-	include './layout/header.php';
+	include 'layout/header.php';
 	// menampilkan data mahasiswa
 	$data_mahasiswa = select("SELECT * FROM mahasiswa ORDER BY id_mahasiswa ASC");
 ?>
@@ -48,5 +49,5 @@
 	</main>
 
 <?php
-	include './layout/footer.php';
+	include 'layout/footer.php';
 ?>

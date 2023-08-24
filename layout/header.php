@@ -1,5 +1,5 @@
 <?php
-	include './config/app.php';
+	include 'config/app.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,8 +32,15 @@
         <li class="nav-item">
           <a class="nav-link" href="crud-modal.php">modal</a>
         </li>
+		<li class="nav-item">
+          <a class="nav-link" href="logout.php">keluar</a>
+        </li>
       </ul>
     </div>
+
+	<div>
+	<a class="navbar-brand" href="#"><?= $_SESSION['nama'];?></a>
+	</div>
   </div>
 </nav>
 	</header>

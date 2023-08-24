@@ -1,4 +1,5 @@
 <?php
+session_start();
 	// membatasi halaman sebelum login
 	if (!isset($_SESSION["login"])){
 		echo "<script>
@@ -6,7 +7,7 @@
 		</script>";
 		exit;
 	}
-	include './config/app.php';
+	include 'config/app.php';
 	// menerima id Akun
 	$id_akun = (int)$_GET['id_akun'];
 
